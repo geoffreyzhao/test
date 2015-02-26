@@ -1,0 +1,64 @@
+<head>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+
+
+<script language="javascript">
+
+function moveCursor()
+{
+var temp = this.txtNum.value;
+if(isNaN(temp))
+{
+alert("请输入一个数字");
+return;
+}
+var rng = this.txtTest.createTextRange();
+rng.move("character",temp);
+rng.select();　　　
+}
+
+</script>
+
+<input type="text" name="txtTest" value="明·罗贯中《三国演义》第二十一回 操曰:“夫英雄者，胸怀大志，腹有良谋，有包藏宇宙之机，吞吐天地之志者也。" size="100"><br>
+
+移动光标到第<input type="text" name="txtNum" size="5">个位置
+
+<input type="button" name="btnMove" value="移动" onclick="moveCursor()">
+<textarea id="test" style="width:200px;height:50px;">asdasdasdasdasdad</textarea>
+<input type="button" onclick="insert()" value="添加123"/>
+
+<script type="text/javascript">
+	(function($){
+$.fn.extend({
+insertAtCaret: function(myValue){
+var $t=$(this)[0];
+if (document.selection) {
+this.focus();
+sel = document.selection.createRange();
+sel.text = myValue;
+this.focus();
+}
+else 
+if ($t.selectionStart || $t.selectionStart == '0') {
+var startPos = $t.selectionStart;
+var endPos = $t.selectionEnd;
+var scrollTop = $t.scrollTop;
+$t.value = $t.value.substring(0, startPos) + myValue + $t.value.substring(endPos, $t.value.length);
+this.focus();
+$t.selectionStart = startPos + myValue.length;
+$t.selectionEnd = startPos + myValue.length;
+$t.scrollTop = scrollTop;
+}
+else {
+this.value += myValue;
+this.focus();  
+}
+}
+}) 
+})(jQuery);
+
+function insert() {
+	$("#test").insertAtCaret("123");
+}
+</script>

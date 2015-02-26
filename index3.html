@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="cruiseDetail.css">
+<script type="text/javascript" src="http://sc1.tdxinfo.com/js/jquery.min.js"></script>
+<title>Insert title here</title>
+<style>
+header {
+  z-index:10;
+}
+
+.fixed-header {
+  position: fixed;
+  top:0; left:0;
+  width: 100%; 
+}
+
+nav {
+  width:100%;
+  height:40px;
+  postion:fixed;
+  z-index:10;
+}
+
+body { 
+  font-family: helvetica;
+  line-height: 1.6;
+  margin:0px; padding:0px;
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="header-img-container">
+		<img src="http://media.tdxinfo.com/tops-mediaserver//imageservice?mediaImageId=54a8c20f45ce458544c9405f" alt="">
+			<div class="img-above-text">【歌诗达邮轮-赛琳娜号】<br> 上海-福冈-济州-上海 4晚5天</div>
+		</div>
+ 		  <nav>
+		    <ul class="nav navbar-nav changeList">
+		      <li><a href="javascript:;">产品介绍</a></li>
+		      <li><a href="javascript:;">行程介绍</a></li>
+		      <li><a href="javascript:;">预订须知</a></li>
+		    <ul>
+		  </nav>
+<!-- 		  	        <ul class="nav navbar-nav changeList">
+	        	<li class="slideList active">
+	        		<a href="#tripIntroduce">产品介绍</a>
+	        		<em></em>
+	        		<i></i>
+	        	</li>
+	        	<li class="slideList ">
+	        		<a href="#tripDetail">行程介绍</a>
+	        		<em></em>
+	        		<i></i>
+	        	</li>
+	        	<li class="slideList">
+		        	<a href="#bookingNotes">预订须知</a>
+		        	<em></em>
+		        	<i></i>
+	        	</li>
+	        </ul> -->
+	</header>
+	     
+	
+	<section class="content">
+	  	<div  id="tripIntroduce">
+        <div class="simpleInfo">
+        	<div class="startDate clearfix">
+        		<div class="dateBlock">
+        			<div class="chief">
+        				<i class="dateIcon"></i>
+        				<span class="title">启航日期</span>
+        			</div>
+    				<ul class="dateList clearfix">
+    							<li class="dateItem">05月03日 </li>
+    				</ul>
+        		</div>
+        		<div class="priceBlock">
+        			<div class="priceCont">
+        				<div class="dateText">05月03日</div>
+        				<div class="priceText">
+        					<em class="currencySymbol">￥</em><b>2874</b><em>起</em>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="cheapContText clearfix">
+        		<div class="chief">
+    				<i class="penIcon"></i>
+    				<span class="title">推荐</span>
+    			</div>
+    			<div class="cont"><pre>众神之船，歌诗达“赛琳娜号”</pre></div>
+        	</div>
+        </div>
+        <div class="splitBar"></div>
+        <div class="cabinInfo">
+        	<div class="cabinRoomTitle">标准内舱四人房IC</div>
+        	<div class="clearfix">
+	        	<div class="cabinImgContainer">
+	        		<img src="http://media.tdxinfo.com/tops-mediaserver//imageservice?mediaImageId=54a296a645cedfc4de75a806" alt=""   onload="setCabinHeight();">
+	        	</div>
+	        	<div class="cabinContInfo">
+	        		<table>
+	        			<colgroup>
+	        				<col width="90px">
+	        				<col width="">
+	        			</colgroup>
+	        			<tbody>
+	        				<tr>
+	        					<th style="vertical-align:top;">房间面积</th>
+	        					<td style="vertical-align:top;">16㎡</td>
+	        				</tr>
+	        				<tr>
+	        					<th >位于甲板</th>
+	        					<td  style="word-break:break-all;">1,2,6,7</td>
+	        				</tr>
+	        				<tr>
+	        					<th style="vertical-align:bottom;">可入住人数</th>
+	        					<td style="vertical-align:bottom;">4</td>
+	        				</tr>
+	        			</tbody>
+	        		</table>
+	        	</div>
+	        </div>
+        </div>
+		</div>
+		
+		<div class="blockModule" id="tripDetail">
+			<div class="mainTitle">行程介绍</div>
+			<div class="tripDetailBody clearfix">
+			<!--
+				<div class="leftNavDays">
+					
+								<div class="dayContainer current">D1</div>
+								<div class="dayContainer">D2</div>
+								<div class="dayContainer">D3</div>
+								<div class="dayContainer">D4</div>
+								<div class="dayContainer">D5</div>
+				</div>
+				-->				
+				<div class="rightTripCont">
+							<div class="eachDayCont">
+								<div class="dayHeader">
+									<table class="dayHeaderTable">
+										<tr>
+											<th rowspan="2">第1天</th>
+											<th>港口</th>
+											<th>抵港</th>
+											<th>离港</th>
+										</tr>
+										<tr>
+											<td>上海</td>
+											<td>--：--</td>
+											<td>17： 00</td>
+										</tr>
+									</table>
+								</div>
+								<div class="dayCont">
+									<div class="dayContDesc"><pre>于指定时间在上海宝山码头集合，办理登船手续，歌诗达邮轮“赛琳娜号”将于17:00启航，您的此次浪漫邮轮之旅就此开始。</pre></div>
+									<div class="activeItems">
+										<div class="activeItem clearfix">
+											<i class="dinnerIcon"></i>
+											<div class="activeCont">早餐:自理，午餐:自理，晚餐:邮轮</div>
+										</div>
+										<div class="activeItem">
+											<i class="liveIcon"></i>
+											<div class="activeItem">入住：邮轮</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="eachDayCont">
+								<div class="dayHeader">
+									<table class="dayHeaderTable">
+										<tr>
+											<th rowspan="2">第2天</th>
+											<th>港口</th>
+											<th>抵港</th>
+											<th>离港</th>
+										</tr>
+										<tr>
+											<td>海上巡游</td>
+											<td>--：--</td>
+											<td>--：--</td>
+										</tr>
+									</table>
+								</div>
+								<div class="dayCont">
+									<div class="dayContDesc"><pre>今日邮轮全天航行在海上。您可在甲板上漫步，欣赏大自然的无敌海景；享受船上的无国界美食，酒吧、自助餐厅等等；舒适华丽的购物中心，备有来自全球各地的著名时尚品牌供您选购；船上丰富多彩的娱乐活动，歌舞、音乐剧等表演；健身俱乐部等休闲娱乐设施，让您和您的家人朋友共享舒适假期。</pre></div>
+									<div class="activeItems">
+										<div class="activeItem clearfix">
+											<i class="dinnerIcon"></i>
+											<div class="activeCont">早餐:邮轮，午餐:邮轮，晚餐:邮轮</div>
+										</div>
+										<div class="activeItem">
+											<i class="liveIcon"></i>
+											<div class="activeItem">入住：邮轮</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="eachDayCont">
+								<div class="dayHeader">
+									<table class="dayHeaderTable">
+										<tr>
+											<th rowspan="2">第3天</th>
+											<th>港口</th>
+											<th>抵港</th>
+											<th>离港</th>
+										</tr>
+										<tr>
+											<td>福冈</td>
+											<td> 09： 00</td>
+											<td>19： 00</td>
+										</tr>
+									</table>
+								</div>
+								<div class="dayCont">
+									<div class="dayContDesc"><pre>邮轮将于今日09:00到达福冈，福冈县位于日本列岛西部、九州北部，是九州岛上最大的县，是九州政治经济文化的中心。东与山口县相对，西界佐贺县，南邻大分县和熊本县，北面与朝鲜半岛相对。三面临海，交通发达。因靠近朝鲜半岛和亚洲大陆而被称为“亚洲的大门”。自然环境优美，是享乐旅游、徒步旅行、海洋体育等野外活动的好地方。海岸线全长310公里，渔业发达，渔产丰富，捕渔量在日本全国居前列，水产品种类繁多，有着“食在福冈”之美名。邮轮将于今日19:00离港。</pre></div>
+									<div class="activeItems">
+										<div class="activeItem clearfix">
+											<i class="dinnerIcon"></i>
+											<div class="activeCont">早餐:邮轮，午餐:邮轮，晚餐:邮轮</div>
+										</div>
+										<div class="activeItem">
+											<i class="liveIcon"></i>
+											<div class="activeItem">入住：邮轮</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="eachDayCont">
+								<div class="dayHeader">
+									<table class="dayHeaderTable">
+										<tr>
+											<th rowspan="2">第4天</th>
+											<th>港口</th>
+											<th>抵港</th>
+											<th>离港</th>
+										</tr>
+										<tr>
+											<td>济州</td>
+											<td> 07： 00</td>
+											<td>14： 00</td>
+										</tr>
+									</table>
+								</div>
+								<div class="dayCont">
+									<div class="dayContDesc"><pre>邮轮将于07：00 到达久负盛名的韩国第一大岛——济州岛，那里四面环海、气候适宜，全年天气温暖，享有“蜜月之岛”、“浪漫之岛”的美称。邮轮将下午14：00启航继续航行。当夜幕降临，典雅华丽的剧院内更为您准备了高潮迭起的精彩娱乐表演和音乐节目。在轻松与休闲中，享受一场充满意大利式浪漫气息的豪华之旅。</pre></div>
+									<div class="activeItems">
+										<div class="activeItem clearfix">
+											<i class="dinnerIcon"></i>
+											<div class="activeCont">早餐:邮轮，午餐:邮轮，晚餐:邮轮</div>
+										</div>
+										<div class="activeItem">
+											<i class="liveIcon"></i>
+											<div class="activeItem">入住：邮轮</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="eachDayCont">
+								<div class="dayHeader">
+									<table class="dayHeaderTable">
+										<tr>
+											<th rowspan="2">第5天</th>
+											<th>港口</th>
+											<th>抵港</th>
+											<th>离港</th>
+										</tr>
+										<tr>
+											<td>上海</td>
+											<td> 08： 00</td>
+											<td>--：--</td>
+										</tr>
+									</table>
+								</div>
+								<div class="dayCont">
+									<div class="dayContDesc"><pre>早上08:00邮轮抵达上海，结束您完美而难忘的邮轮之旅。</pre></div>
+									<div class="activeItems">
+										<div class="activeItem clearfix">
+											<i class="dinnerIcon"></i>
+											<div class="activeCont">早餐:邮轮，午餐:自理，晚餐:自理</div>
+										</div>
+										<div class="activeItem">
+											<i class="liveIcon"></i>
+											<div class="activeItem">入住：自理</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					
+					</div>
+				</div>
+			</div>
+
+		<div class="blockModule" id="bookingNotes">
+			<div class="mainTitle">预订须知</div>
+			<div class="priceInclude">
+				<div class="subTitle">费用包含</div>
+				<pre>1、歌诗达“赛琳娜号”所选客舱住宿4晚；
+2、歌诗达“赛琳娜号”每日餐厅用餐（1日5餐：早餐、午餐、下午茶、晚餐、宵夜）；
+3、免费享用指定的船上设施、场所，免费观看、参加指定的娱乐节目及活动（健身房、游泳池、按摩池、娱乐音乐表演、儿童与青少年在船上的游戏和各种免费参与的娱乐项目）；
+4、港务费769元/人；
+5、日本团队签证费、领队服务费；
+6、岸上观光费用。</pre>
+			</div>
+			<div class="priceExclude">
+				<div class="subTitle">费用不包含</div>
+				<pre>1、邮轮服务费:13周岁以上（含13周岁）乘客$46美金/人;4-12周岁乘客为$23美金/人;4周岁以下免服务费.（邮轮上支付）；
+2、邮轮专业保险70元/人(强烈建议客人购买)
+3、出发地至上海邮轮码的往返交通费；
+4、邮轮上、境外酒店的私人消费（如：打电话，洗衣服，购物、酒吧咖啡厅消费、SPA等）；
+5、以上服务内容中未提及的其他费用。
+</pre>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<div class="topTitle">
+				<i class="cruiseIcon"></i>
+				<span class="titleText">欢迎预订</span>
+			</div>
+			<div class="cont">
+				<div>出发日期：</div>
+				<div class="startDate">
+    								05月03日 
+    			</div>
+				<div class="tip">*出发日期不同，房型不同价格会发生变化，请咨询产品联系人。</div>
+				<div style="width:100%;height:100px;"></div>
+				<div class="telBlock">
+					<div class="telPhoneIcon"></div>
+					<!-- <div class="hideDiv"></div> -->
+					<div class="telCont">
+						<div class="telNum"><a href="tel:13636466270">13636466270</a></div>
+						<div class="contact">
+							<span>联系人：网瓦规划</span>
+							<span style="color:#ffff6a;padding-left:10px;">拨打电话，立即预定</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<script>
+		$(function(){
+			var imgHeight = 300;
+			
+			$('header').css('height', imgHeight + 'px');
+			
+			$(window).scroll(function(){
+			    if ($(window).scrollTop() >= imgHeight) {
+			       $('nav').addClass('fixed-header');
+			    }
+			    else {
+			       $('nav').removeClass('fixed-header');
+			    }
+			});
+		});
+	</script>
+</body>
+</html>
