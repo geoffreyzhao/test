@@ -3,8 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Index</title>
+	<script type="text/javascript" src="js/zepto.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
 </head>
 <body>
-	<div>测试git命令-01</div>
+	<button>Tap Me</button>
+
+	<script type="text/javascript">
+		$(function(){
+		  $("button").tap(function(){
+		  	alert("Tap Button!");
+		  });
+		});
+
+	</script>
 </body>
 </html>
