@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://www.swiper.com.cn/demo/08-nested.html -->
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.5,user-scalable=no">
+  <title>Demo</title>
+  <link rel="stylesheet" href="http://www.swiper.com.cn/dist/css/idangerous.swiper.css">
+  <script src="js/zepto.js"></script>
+  <script src="js/touch.js"></script>
+  <style>
+/* Demo Styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.swiper-container {
+  width: 360px;
+  height: 250px;
+  color: #fff;
+  text-align: center;
+}
+.swiper-nested-1, .swiper-nested-2 {
+  width: 100%;
+}
+.red-slide {
+  background: #ca4040;
+}
+.blue-slide {
+  background: #4390ee;
+}
+.orange-slide {
+  background: #ff8604;
+}
+.green-slide {
+  background: #49a430;
+}
+.pink-slide {
+  background: #973e76;
+}
+.swiper-slide {
+  font-style: italic;
+  font-size: 42px;
+  margin-bottom: 0;
+  line-height: 250px;
+}
+.swiper-nested-1 .swiper-slide, .swiper-nested-2 .swiper-slide {
+  line-height: 125px;
+  font-size: 21px
+}
+.pagination {
+  position: absolute;
+  z-index: 100;
+  left: 10px;
+  bottom: 10px;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #222;
+  margin-right: 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+.pagination-nested-1, .pagination-nested-2 {
+  bottom: auto;
+  top: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: block;
+}
+.pagination-nested-1 .swiper-pagination-switch, .pagination-nested-2 .swiper-pagination-switch {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 5px; 
+}
+  </style>
+</head>
+<body>
+  <div class="swiper-container swiper-parent">
+    <!-- <div class="pagination pagination-parent">
+      <span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span>
+      <span class="swiper-pagination-switch swiper-visible-switch"></span>
+      <span class="swiper-pagination-switch swiper-visible-switch"></span>
+      <span class="swiper-pagination-switch"></span>
+      <span class="swiper-pagination-switch"></span>
+      <span class="swiper-pagination-switch"></span>
+      <span class="swiper-pagination-switch"></span>
+      <span class="swiper-pagination-switch"></span>
+    </div> -->
+    <div class="swiper-wrapper" style="width: 1760px; height: 250px; transition-duration: 0s; -webkit-transition-duration: 0s; transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0px, 0px, 0px);">
+      <div class="swiper-slide red-slide swiper-slide-visible swiper-slide-active" style="width: 220px; height: 250px;"> Slide 1 </div>
+      <div class="swiper-slide swiper-slide-visible" style="width: 220px; height: 250px;position:relative;">
+        <div class="swiper-container swiper-nested-1">
+          <div class="pagination pagination-nested-1">
+            <span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span>
+            <span class="swiper-pagination-switch swiper-visible-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+          </div>
+          <div class="swiper-wrapper" style="width: 220px; height: 750px;">
+            <div class="swiper-slide green-slide swiper-slide-visible swiper-slide-active" style="width: 220px; height: 125px;">Vertical Slide 1</div>
+            <div class="swiper-slide blue-slide swiper-slide-visible" style="width: 220px; height: 125px;">Vertical Slide 2</div>
+            <div class="swiper-slide pink-slide" style="width: 220px; height: 125px;">Vertical Slide 3</div>
+            <div class="swiper-slide green-slide" style="width: 220px; height: 125px;">Vertical Slide 4</div>
+            <div class="swiper-slide blue-slide" style="width: 220px; height: 125px;">Vertical Slide 5</div>
+            <div class="swiper-slide pink-slide" style="width: 220px; height: 125px;">Vertical Slide 6</div>
+          </div>
+        </div>
+        <div class="" style="width:30px;height:30px;background-color:black;position:absolute;top:0;right:0;z-index:2;"></div>
+      </div><!-- 
+      <div class="swiper-slide swiper-slide-visible" style="width: 220px; height: 250px;">
+        <div class="swiper-container swiper-nested-2">
+          <div class="pagination pagination-nested-2">
+            <span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span>
+            <span class="swiper-pagination-switch swiper-visible-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+          </div>
+          <div class="swiper-wrapper" style="width: 220px; height: 750px;">
+            <div class="swiper-slide pink-slide swiper-slide-visible swiper-slide-active" style="width: 220px; height: 125px;">Vertical Slide 1</div>
+            <div class="swiper-slide orange-slide swiper-slide-visible" style="width: 220px; height: 125px;">Vertical Slide 2</div>
+            <div class="swiper-slide blue-slide" style="width: 220px; height: 125px;">Vertical Slide 3</div>
+            <div class="swiper-slide green-slide" style="width: 220px; height: 125px;">Vertical Slide 4</div>
+            <div class="swiper-slide pink-slide" style="width: 220px; height: 125px;">Vertical Slide 5</div>
+            <div class="swiper-slide blue-slide" style="width: 220px; height: 125px;">Vertical Slide 6</div>
+          </div>
+        </div>
+      </div> -->
+      <div class="swiper-slide green-slide" style="width: 220px; height: 250px;"> Slide 4 </div>
+      <div class="swiper-slide pink-slide" style="width: 220px; height: 250px;"> Slide 5 </div>
+      <div class="swiper-slide orange-slide" style="width: 220px; height: 250px;"> Slide 6 </div>
+      <div class="swiper-slide green-slide" style="width: 220px; height: 250px;"> Slide 7 </div>
+      <div class="swiper-slide pink-slide" style="width: 220px; height: 250px;"> Slide 8 </div>
+    </div>
+  </div>
+  <!-- <script src="./Demo_files/jquery-1.10.1.min.js"></script> -->
+  <script src="./Demo_files/idangerous.swiper.min.js"></script>
+  <script>
+  $(function(){
+
+    // $(".swiper-slide").removeAttr("style");
+
+    // $(".swiper-container").css({
+    //     height: ($(window).height()) + "px",
+    //     width: "100%"
+    //   });
+
+      $(".swiper-slide").css({
+        // height: ($(window).height()) + "px",
+        // width: "375px"
+      });
+  });
+
+  var swiperParent = new Swiper('.swiper-parent',{
+    // pagination: '.pagination-parent',
+    // paginationClickable: true,
+    slidesPerView: 1
+  })
+  var swiperNested1 = new Swiper('.swiper-nested-1',{
+    mode: 'vertical',
+    pagination: '.pagination-nested-1',
+    paginationClickable: true,
+    slidesPerView: 1,
+    onTouchStart: function(){
+      // alert($(".pagination-nested-1").length + "\n"
+      //   + $(".pagination-nested-1").html() + "\n"
+      //   + $(".pagination-nested-1").attr("style"));
+      // $(".pagination-nested-1").css({
+      //   display: "block"
+      // });
+      // alert($(".pagination-nested-1").length + "\n"
+      //   + $(".pagination-nested-1").html() + "\n"
+      //   + $(".pagination-nested-1").css("width") + "\n"
+      //   + $(".pagination-nested-1").css("height") + "\n"
+      //   + $(".pagination-nested-1").css("display") + "\n"
+      //   + $(".pagination-nested-1").css("background-color") + "\n"
+      //   + $(".pagination-nested-1").css("z-index") + "\n"
+      //   + $(".pagination-nested-1").css("visibility") + "\n"
+      //   + $(".pagination-nested-1").siblings(".swiper-wrapper").css("z-index"));
+    },
+    onTouchMove: function(){
+      // alert($(".pagination-nested-1").length + "\n"
+      //   + $(".pagination-nested-1").html() + "\n"
+      //   + $(".pagination-nested-1").css("width") + "\n"
+      //   + $(".pagination-nested-1").css("height") + "\n"
+      //   + $(".pagination-nested-1").css("display") + "\n"
+      //   + $(".pagination-nested-1").css("background-color") + "\n"
+      //   + $(".pagination-nested-1").css("z-index") + "\n"
+      //   + $(".pagination-nested-1").css("visibility") + "\n"
+      //   + $(".pagination-nested-1").siblings(".swiper-wrapper").css("z-index"));
+    },
+    onTouchEnd: function(){
+      // alert($(".pagination-nested-1").length + "\n"
+      //   + $(".pagination-nested-1").html() + "\n"
+      //   + $(".pagination-nested-1").css("width") + "\n"
+      //   + $(".pagination-nested-1").css("height") + "\n"
+      //   + $(".pagination-nested-1").css("display") + "\n"
+      //   + $(".pagination-nested-1").css("background-color") + "\n"
+      //   + $(".pagination-nested-1").css("z-index") + "\n"
+      //   + $(".pagination-nested-1").css("visibility") + "\n"
+      //   + $(".pagination-nested-1").siblings(".swiper-wrapper").css("z-index"));
+    }
+  })
+  // var swiperNested2 = new Swiper('.swiper-nested-2',{
+  //   mode: 'vertical',
+  //   pagination: '.pagination-nested-2',
+  //   paginationClickable: true,
+  //   slidesPerView: 2
+  // })
+  </script>
+
+</body></html>

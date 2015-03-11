@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>开头</title>
 	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" /> -->
+
+	<!-- <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" /> -->
+
 	<title>Index</title>
 	<script type="text/javascript" src="js/zepto.js"></script>
 	<script type="text/javascript" src="js/touch.js"></script>
+
+	<style type="text/css">
+
+	html {
+		/*font-size: 62.5%;*/
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.test {
+		font-size: 12px;
+	}
+	</style>
+
+
 </head>
 <body>
-	<button>Tap Me</button>
+	<!-- <button>Tap Me</button>
+	<div class="test">(2011年 2月 23日, 上海) 天气逐渐转暖, 又逢旅游业淡季, 越来越多的消费者选择在此时错峰出游, 以节省出行的成本。近日, 记者从真旅网了解到, 航空公司近期的低价策略吸引了很多错峰出行的游客, 2月下旬起机票价格跳水, 低至 2折, 而在预订机票的同时, 便捷的真旅网机票酒店套餐为游客提供了更多的低价选择。</div> -->
+	<div style="width:100%;height:541px;background-color:red;"></div>
+
+	<div style="width:400px;background-color:blue;height:10px;"></div>
+
+	<input type="file" accept="image/*" />
 
 	<script type="text/javascript">
 		$(function(){
 		  $("button").tap(function(){
-		  	alert("Tap Button!");
+
+		  	alert("document.documentElement.clientWidth:" + document.documentElement.clientWidth + "|||"
+		  		+ "window.screen.width:" + window.screen.width + "|||"
+		  		+ "window.width ratio:" + ($(window).width() / 320) + "|||"
+		  		+ "navigator.userAgent:" + navigator.userAgent + "|||"
+		  		+ "window.devicePixelRatio:" + window.devicePixelRatio);
 		  });
+		  // alert($(window).height() + "||" + window.screen.availHeight);
 		});
 
 	</script>
